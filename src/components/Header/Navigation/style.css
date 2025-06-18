@@ -1,0 +1,24 @@
+li .submenu li .submenu{
+	top:0px;
+	left:120% !important;
+	opacity: 0 !important;
+	transition: all 0.3s ease;
+}
+li .submenu li button{
+	font-weight: 450;
+}
+li .submenu li:hover button{
+	color: #ff5252
+}
+li .submenu li:hover .submenu{
+	left: 100% !important;
+	opacity: 1 !important;
+}
+li .submenu li .submenu button{
+	color: rgba(0, 0, 0, 0.8)
+
+}
+li .submenu li .submenu button:hover{
+	color: #ff5252 !important;
+
+}

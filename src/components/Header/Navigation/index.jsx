@@ -21,8 +21,68 @@ const NavigationPage = () => {
 									<Button size="sm" variant="custom" className="link transition font-semibold text-[rgba(0, 0, 0, 0.7)] hover:text-[#ff5353]">Home</Button>
 								</Link>
 							</li>
-							<li className='list-none'>
+							<li className='list-none relative group'>
 								<Link className="link" to="/"><Button size="sm" variant="custom" className="link transition font-semibold text-[rgba(0, 0, 0, 0.7)] hover:text-[#ff5353]">Fashion</Button></Link>
+								<div className='submenu absolute top-[120%] left-[0%] min-w-[150px] bg-white  shadow-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300  group-hover:top-[100%] z-999'>
+									<ul>
+										<li className='list-none w-full relative'>
+											<Link to={"/"}>
+											<Button variant="custom2" className="text-black/80 w-full justify-start text-left ">Men</Button>
+											<div className='submenu absolute min-w-[150px] bg-white  shadow-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300  group-hover:top-[100%]'>
+									<ul>
+										<li className='list-none w-full'>
+											<Link to={"/"}>
+											<Button variant="custom2" className="text-black/80 w-full justify-start text-left ">T-Shirt</Button>
+											</Link>
+											
+										</li>
+										<li className='list-none w-full'>
+											<Link to={"/"}>
+											<Button variant="custom2" className="text-black/80 w-full justify-start text-left">Women</Button>
+											</Link>
+										</li>
+										<li className='list-none w-full'>
+											<Link to={"/"}>
+											<Button variant="custom2" className="text-black/80 w-full justify-start text-left">Kids</Button>
+											</Link>
+										</li>
+										<li className='list-none w-full'>
+											<Link to={"/"}>
+											<Button variant="custom2" className="text-black/80 w-full justify-start text-left">Girls</Button>
+											</Link>
+										</li>
+										<li className='list-none w-full'>
+											<Link to={"/"}>
+											<Button variant="custom2" className="text-black/80 w-full justify-start text-left">Boy</Button>
+											</Link>
+										</li>
+									</ul>
+								</div>
+											</Link>
+											
+										</li>
+										<li className='list-none w-full'>
+											<Link to={"/"}>
+											<Button variant="custom2" className="text-black/80 w-full justify-start text-left">Women</Button>
+											</Link>
+										</li>
+										<li className='list-none w-full'>
+											<Link to={"/"}>
+											<Button variant="custom2" className="text-black/80 w-full justify-start text-left">Kids</Button>
+											</Link>
+										</li>
+										<li className='list-none w-full'>
+											<Link to={"/"}>
+											<Button variant="custom2" className="text-black/80 w-full justify-start text-left">Girls</Button>
+											</Link>
+										</li>
+										<li className='list-none w-full'>
+											<Link to={"/"}>
+											<Button variant="custom2" className="text-black/80 w-full justify-start text-left">Boy</Button>
+											</Link>
+										</li>
+									</ul>
+								</div>
 							</li>
 							<li className='list-none'>
 								<Link className="link" to="/"><Button size="sm" variant="custom" className="link transition font-semibold text-[rgba(0, 0, 0, 0.7)] hover:text-[#ff5353]">Electronics</Button></Link>
