@@ -2,7 +2,7 @@ import React from 'react'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
 const HomeSlider = () => {
-	const plugin = React.useRef(Autoplay({ delay: 30000, stopOnInteraction: true }))
+	const plugin = React.useRef(Autoplay({ delay: 4000, stopOnInteraction: true }))
 	const handleMouseEnter = () => {
     const pluginInstance = plugin.current;
     pluginInstance?.stop?.(); // dừng
@@ -26,8 +26,8 @@ const HomeSlider = () => {
 					<CarouselItem><img className='w-full rounded-3xl overflow-hidden' src='https://theme.hstatic.net/200000174405/1001111911/14/slideshow_7.jpg?v=2338' /></CarouselItem>
 
 				</CarouselContent>
-				<CarouselPrevious />
-				<CarouselNext />
+				<CarouselPrevious className="hidden md:flex" />
+				<CarouselNext className="hidden md:flex"/>
 			</Carousel>
 		</div>
 	)

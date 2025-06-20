@@ -16,6 +16,16 @@ header .top-strip{
 .link:hover{
 	color: #ff5252;
 }
+::-webkit-scrollbar{
+	width: 8px !important; height: 8px !important;
+}
+::-webkit-scrollbar-thumb{
+	background-color: #ff5252 !important;
+}
+::-webkit-scrollbar-track{
+	background-color: #ccc;
+}
+
 .container{
 	width: 90%;
 	margin: auto
