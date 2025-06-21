@@ -1,0 +1,54 @@
+import React from 'react'
+import "./style.css"
+import { Link } from 'react-router-dom'
+import Rating from '../ui/rating'
+import {Button}  from "@/components/ui/button"
+import { FaRegHeart } from "react-icons/fa"
+import { GoGitCompare } from "react-icons/go";
+import { MdZoomOutMap } from "react-icons/md";
+
+
+const ProductsItem = () => {
+	return (
+		<div className='productItem rounded-md shadow-xl' >
+			<div className='imgwrapper group relative border-r-1 w-full border-[rgba(0, 0, 0, 0.8)]'>
+			<Link to="/">
+				<div className='w-[100%] h-[250px] overflow-hidden'>
+					<img src='https://serviceapi.spicezgold.com/download/1742463096956_hbhb2.jpg'
+					className='w-full rounded-md object-cover' />
+					<img src='https://serviceapi.spicezgold.com/download/1742463096960_hbhb3.jpg' 
+					className='w-full absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ' />
+				</div>
+				</Link>
+				<span className='absolute rounded-lg top-[10px] z-99 left-[10px] p-1 flex text-[12px] font-semibold items-center bg-[#ff5353] text-white'>
+				 10%
+				</span>
+				<div className='actions top-[-200px] opacity-0 group-hover:opacity-100 absolute transition-all duration-400 ease-in-out group-hover:top-[15px] flex-col right-[15px] z-99 flex items-center gap-2 w-[45px] '>
+					<Button variant='custom2' className="min-w-[35px] h-[35px] rounded-full">
+						<FaRegHeart className='text-18px' />
+					</Button>
+					<Button variant='custom2' className="min-w-[35px] h-[35px] rounded-full ">
+						<GoGitCompare className='text-18px' />
+					</Button>
+					<Button variant='custom2' className="min-w-[35px] h-[35px] rounded-full">
+						<MdZoomOutMap className='text-18px' />
+					</Button>
+				</div>
+			</div>
+			<div className='info p-3 py-5'>
+			<Link className='link transition-all' to="#">
+				<h6 className='text-[13px]'>Solent Green</h6>
+				</Link>
+				
+				<h3 className='text-[14px] title mt-2 font-semibold mb-1 text-[rgba(0, 0, 0, 0.9)]'><Link className='link transition-all' to="#">Siril. ddđ jdasd sadjadja đá  djsadjasd sasajdadjassda </Link></h3>
+				<Rating max={5} value={3}  />
+				<div className='flex items-center gap-4 justify-between'>
+					<span className='line-through text-gray-500 text-[15px] font-semibold'>$58.00</span>
+					<span className='text-[#ff5353] text-[15px] font-bold'>$58.00</span>
+				</div>
+			</div>
+		</div>
+	)
+}
+
+export default ProductsItem
