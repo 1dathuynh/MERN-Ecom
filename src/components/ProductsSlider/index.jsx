@@ -9,29 +9,31 @@ const product = [
 	},
 ]
 const ProductsSlider = ({ props }) => {
+	const basis = `basis-1/${props}`
+	
 	return (
 		<div className='py-5'>
 		<Carousel className=''>
 			<CarouselContent className="p-4 -ml-4 -mr-4'">
-				<CarouselItem className="basis-1/6">
+				<CarouselItem className={`pl-4 ${basis}`}>
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className="basis-1/6">
+				<CarouselItem className={basis}>
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className="basis-1/6">
+				<CarouselItem className={basis}>
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className="basis-1/6">
+				<CarouselItem className={basis}>
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className="basis-1/6">
+				<CarouselItem className={basis}>
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className="basis-1/6">
+				<CarouselItem className={basis}>
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className="basis-1/6">
+				<CarouselItem className={basis}>
 					<ProductsItem />
 				</CarouselItem>
 

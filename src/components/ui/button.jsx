@@ -22,7 +22,8 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         custom:
           "hover:bg-white cursor-pointer hover:scale-[1.03]",
-        custom2: 'bg-white text-black cursor-pointer hover:text-white hover:bg-[#ff5353]',
+        btnOrg: "text-white uppercase rounded-sm py-3 px-6 bg-[#ff5353] hover:bg-black",
+        custom2: 'text-black/80 w-full justify-start text-left bg-white text-black cursor-pointer hover:text-white',
         effect:
           "bg-white border-0 outline outline-1 outline-gray-300 px-8 py-6 shadow-[rgba(255,83,83,0.4)] transition duration-300 cursor-pointer rounded-md border-b-[4px] border-b-gray-200 hover:shadow-[0px_15px_25px_-5px_rgba(255,83,83,0.4)] hover:scale-[1.03] active:shadow-[0px_4px_8px_rgba(255,83,83,0.6)] active:scale-95",
       },

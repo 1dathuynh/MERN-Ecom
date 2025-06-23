@@ -1,7 +1,7 @@
 import React from 'react'
 import { Carousel, CarouselContent, CarouselItem} from "@/components/ui/carousel"
 import { Link } from 'react-router-dom'
-const AdsBanner = () => {
+const AdsBanner = ({item}) => {
 	const banner = [
     {
       id: 1,
@@ -24,6 +24,9 @@ const AdsBanner = () => {
       image: "/banner.png"
     },
   ]
+
+  const basis = `basis-1/${item}`
+  
 	return (
 		<div className='container mx-auto py-6'>
 			<Carousel opts={{
@@ -31,9 +34,9 @@ const AdsBanner = () => {
           loop: true,
         }}
         className="w-full">
-					<CarouselContent className="-ml-4">
+					<CarouselContent className="-ml-2 flex">
 						{banner.map(item =>  (
-							<CarouselItem key={item.id} className="pl4 basis-1/3">
+							<CarouselItem key={item.id} className={`pl-2 ${basis}`}>
 									
                   <div className='overflow-hidden rounded-md group'>
                   <Link to={'#'}>
