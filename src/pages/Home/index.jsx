@@ -8,11 +8,24 @@ import ProductsSlider from "../../components/ProductsSlider";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious,CarouselNext } from "@/components/ui/carousel"
 import BlogItem from "../../components/BlogItem";
 import Footer from "../../components/Footer";
+import HomeSliderV2 from "../../components/HomeSliderV2";
+import BannerBox from "../../components/BannerBox";
 
 const HomePage = () => {
   return (
     <div className="">
-      <HomeSlider />
+      {/* <HomeSlider /> */}
+      <section className="py-6">
+			<div className='container flex gap-5'>
+				<div className='part1 w-[70%]'>
+					<HomeSliderV2 />
+				</div>
+        <div className='part2 w-[30%] flex-col gap-5 pl-5 flex items-center justify-between'>
+					<BannerBox info='left' image={'/bannnerBox.jpg'}/>
+          <BannerBox info='right' image={'/BannerBox2.jpg'}/>
+				</div>
+			</div>
+		</section>
       <HomeCatSlider />
 
       <section className="bg-white py-6">
