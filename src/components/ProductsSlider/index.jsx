@@ -11,40 +11,40 @@ const ProductsSlider = ({ props }) => {
           loop: true,
     }} className='w-full'>
 			<CarouselContent className="p-4 -ml-4 -mr-4'">
-				<CarouselItem className={`pl-4 ${basis}`}>
+				<CarouselItem className={`pl-4 basis-1/5`}>
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className={`pl-4 ${basis}`}>
+				<CarouselItem className={`pl-4 basis-1/5`}>
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className={`pl-4 ${basis}`}>
+				<CarouselItem className={`pl-4 basis-1/5`}>
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className={`pl-4 ${basis}`}>
+				<CarouselItem className={`pl-4 basis-1/5`}>
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className={`pl-4 ${basis}`}>
+				<CarouselItem className={`pl-4 basis-1/5`}>
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className={`pl-4 ${basis}`}>
+				<CarouselItem className={`pl-4 basis-1/5`}>
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className={`pl-4 ${basis}`}>
+				<CarouselItem className={`pl-4 basis-1/5`}>
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className={`pl-4 ${basis}`}>
+				<CarouselItem className={`pl-4 basis-1/5`}>
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className={`pl-4 ${basis}`}>
+				<CarouselItem className={`pl-4 basis-1/5`}>
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className={`pl-4 ${basis}`}>
+				<CarouselItem className={`pl-4 basis-1/5`}>
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className={`pl-4 ${basis}`}>
+				<CarouselItem className={`pl-4 basis-1/5`}>
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className={`pl-4 ${basis}`}>
+				<CarouselItem className={`pl-4 basis-1/5`}>
 					<ProductsItem />
 				</CarouselItem>
 

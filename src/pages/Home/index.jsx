@@ -51,7 +51,7 @@ const HomePage = () => {
               </Tabs>
             </div>
           </div>
-          <ProductsSlider props={6} />
+          <ProductsSlider props={7} />
         </div>
       </section>
 
@@ -89,7 +89,7 @@ const HomePage = () => {
           <h2 className="text-[20px] font-[600]">Latest Products</h2>
           <ProductsSlider props={6} />
         </div>
-        <AdsBanner item={3} />
+        <AdsBanner item={4} />
       </section>
 
 
