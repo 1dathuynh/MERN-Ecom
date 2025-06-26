@@ -25,6 +25,13 @@ header .top-strip{
 ::-webkit-scrollbar-track{
 	background-color: #ccc;
 }
+.itemViewActions .button .active svg{
+	color: #ff5252
+}
+
+.ReactCollapse--collapse {
+  transition: height 500ms;
+}
 
 .container{
 	width: 90%;

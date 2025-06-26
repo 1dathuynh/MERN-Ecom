@@ -1,9 +1,9 @@
-import React from 'react'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import ProductsItem from '../ProductsItem'
 const ProductsSlider = ({ props }) => {
-	const basis = `basis-1/${props}`
-	
+	const basisStyle = {
+		flexBasis: `${100/props}%`
+	}
 	return (
 		<div className='py-5'>
 		<Carousel opts={{
@@ -11,40 +11,40 @@ const ProductsSlider = ({ props }) => {
           loop: true,
     }} className='w-full'>
 			<CarouselContent className="p-4 -ml-4 -mr-4'">
-				<CarouselItem className={`pl-4 basis-1/5`}>
+				<CarouselItem style={basisStyle} className={`pl-4`}>
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className={`pl-4 basis-1/5`}>
+				<CarouselItem style={basisStyle} className={`pl-4`} >
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className={`pl-4 basis-1/5`}>
+				<CarouselItem style={basisStyle} className={`pl-4`} >
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className={`pl-4 basis-1/5`}>
+				<CarouselItem style={basisStyle} className={`pl-4`} >
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className={`pl-4 basis-1/5`}>
+				<CarouselItem style={basisStyle} className={`pl-4`} >
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className={`pl-4 basis-1/5`}>
+				<CarouselItem style={basisStyle} className={`pl-4`} >
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className={`pl-4 basis-1/5`}>
+				<CarouselItem style={basisStyle} className={`pl-4`} >
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className={`pl-4 basis-1/5`}>
+				<CarouselItem style={basisStyle} className={`pl-4`} >
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className={`pl-4 basis-1/5`}>
+				<CarouselItem style={basisStyle} className={`pl-4`} >
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className={`pl-4 basis-1/5`}>
+				<CarouselItem style={basisStyle} className={`pl-4`} >
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className={`pl-4 basis-1/5`}>
+				<CarouselItem style={basisStyle} className={`pl-4`} >
 					<ProductsItem />
 				</CarouselItem>
-				<CarouselItem className={`pl-4 basis-1/5`}>
+				<CarouselItem style={basisStyle} className={`pl-4`} >
 					<ProductsItem />
 				</CarouselItem>
 

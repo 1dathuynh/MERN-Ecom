@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Star } from "lucide-react" // hoặc dùng react-icons nếu bạn thích
+import { Star } from "lucide-react"
 
 export default function Rating({ max = 5, value = 0, onChange }) {
   const [hovered, setHovered] = useState(0)
@@ -7,7 +7,7 @@ export default function Rating({ max = 5, value = 0, onChange }) {
 
   const handleClick = (val) => {
     setSelected(val)
-    onChange?.(val) // gọi hàm nếu có
+    onChange?.(val) 
   }
 
   return (
@@ -25,7 +25,7 @@ export default function Rating({ max = 5, value = 0, onChange }) {
             className="transition transform hover:scale-110"
           >
             <Star
-              className={`w-3.5 h-3.5 ${
+              className={`w-3.5 cursor-pointer h-3.5 ${
                 isFilled ? "fill-yellow-400 stroke-yellow-400" : "stroke-gray-400"
               }`}
             />

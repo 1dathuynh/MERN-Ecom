@@ -6,12 +6,12 @@ import {Button}  from "@/components/ui/button"
 import { FaRegHeart } from "react-icons/fa"
 import { GoGitCompare } from "react-icons/go";
 import { MdZoomOutMap } from "react-icons/md";
+import { MdOutlineShoppingCart } from 'react-icons/md'
 
-
-const ProductsItem = () => {
+const ProductsItemListView = () => {
 	return (
-		<div className='productItem rounded-md shadow-xl' >
-			<div className='imgwrapper group relative border-r-1 w-full border-[rgba(0, 0, 0, 0.8)]'>
+		<div className='productItem flex items-center rounded-md shadow-xl' >
+			<div className='imgwrapper w-[25%] group relative overflow-hidden border-r-1 border-[rgba(0, 0, 0, 0.8)]'>
 			<Link to="/">
 				<div className='w-[100%] h-[250px] relative rounded-md overflow-hidden'>
 					<img src='https://serviceapi.spicezgold.com/download/1742463096956_hbhb2.jpg'
@@ -35,20 +35,26 @@ const ProductsItem = () => {
 					</Button>
 				</div>
 			</div>
-			<div className='info p-3 py-5'>
+			<div className='info p-3 py-5 px-8 w-[75%]'>
 			<Link className='link transition-all' to="#">
 				<h6 className='text-[13px]'>Solent Green</h6>
 				</Link>
 				
-				<h3 className='text-[14px] title mt-2 font-semibold mb-1 text-[rgba(0, 0, 0, 0.9)]'><Link className='link transition-all' to="#">Siril. ddđ jdasd sadjadja đá  djsadjasd sasajdadjassda </Link></h3>
+				<h3 className='text-[18px] title mt-3 font-semibold mb-2 text-[rgba(0, 0, 0, 0.9)]'><Link className='link transition-all' to="#">Siril. ddđ jdasd sadjadja đá  djsadjasd sasajdadjassda </Link></h3>
+				<p className='text-[14px] mb-3'>orem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta sodales bibendum. D</p>
 				<Rating max={5} value={3}  />
-				<div className='flex items-center gap-4 justify-between'>
+				
+				<div className='flex items-center mt-2 gap-4'>
 					<span className='line-through text-gray-500 text-[15px] font-semibold'>$58.00</span>
 					<span className='text-[#ff5353] text-[15px] font-bold'>$58.00</span>
 				</div>
+				<div className='mt-3'>
+					<Button className="flex gap-2" variant='btnOrg'><MdOutlineShoppingCart className='text-[16px]' />Add to Cart</Button>
+				</div>
+				
 			</div>
 		</div>
 	)
 }
 
-export default ProductsItem
+export default ProductsItemListView
