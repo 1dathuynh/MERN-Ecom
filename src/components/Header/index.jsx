@@ -9,6 +9,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip
 const Header = () => {
 	return (
 		<header className='bg-white'>
+			{/* Tool tip */}
 			<div className='top-strip py-1'>
 				<div className='container'>
 					<div className='flex items-center justify-between'>
@@ -28,6 +29,7 @@ const Header = () => {
 					</div>
 				</div>
 			</div>
+			
 			<div className='header py-3'>
 				<div className='container'>
 					<div className='grid grid-cols-[25%_45%_30%]'>
@@ -100,6 +102,8 @@ const Header = () => {
 
 				</div>
 			</div>
+			
+			{/* Nav */}
 			<div className=''>
 				<NavigationPage />
 			</div>

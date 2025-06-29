@@ -16,13 +16,16 @@ const NavigationPage = () => {
 					</div>
 					<div>
 						<ul className='flex items-center'>
+							
 							<li className='list-none'>
 								<Link className="link transition text-[14px] font-semibold" to="/">
 									<Button size="sm" variant="custom" className="link transition font-semibold text-[rgba(0, 0, 0, 0.7)] hover:text-[#ff5353] py-6">Home</Button>
 								</Link>
 							</li>
+
+							{/* Fashion */}
 							<li className='list-none relative group'>
-								<Link className="link" to="/"><Button size="sm" variant="custom" className="link transition font-semibold text-[rgba(0, 0, 0, 0.7)] hover:text-[#ff5353] py-6">Fashion</Button></Link>
+								<Link className="link" to="/productListing"><Button size="sm" variant="custom" className="link transition font-semibold text-[rgba(0, 0, 0, 0.7)] hover:text-[#ff5353] py-6">Fashion</Button></Link>
 								<div className='submenu absolute top-[120%] left-[0%] min-w-[150px] bg-white  shadow-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300  group-hover:top-[100%] z-999'>
 									<ul>
 										<li className='list-none w-full relative'>
@@ -79,27 +82,28 @@ const NavigationPage = () => {
 									</ul>
 								</div>
 							</li>
+
 							<li className='list-none'>
-								<Link className="link" to="/"><Button size="sm" variant="custom" className="link transition font-semibold text-[rgba(0, 0, 0, 0.7)] hover:text-[#ff5353] py-6">Electronics</Button></Link>
+								<Link className="link" to="/productListing"><Button size="sm" variant="custom" className="link transition font-semibold text-[rgba(0, 0, 0, 0.7)] hover:text-[#ff5353] py-6">Electronics</Button></Link>
 							</li>
 							<li className='list-none'>
-								<Link className="link" to="/"><Button size="sm" variant="custom" className="link transition font-semibold text-[rgba(0, 0, 0, 0.7)] hover:text-[#ff5353] py-6">Bags</Button></Link>
+								<Link className="link" to="/productListing"><Button size="sm" variant="custom" className="link transition font-semibold text-[rgba(0, 0, 0, 0.7)] hover:text-[#ff5353] py-6">Bags</Button></Link>
 							</li>
 							<li className='list-none'>
-								<Link className="link" to="/"><Button size="sm" variant="custom" className="link transition font-semibold text-[rgba(0, 0, 0, 0.7)] hover:text-[#ff5353] py-6">Footwear</Button></Link>
+								<Link className="link" to="/productListing"><Button size="sm" variant="custom" className="link transition font-semibold text-[rgba(0, 0, 0, 0.7)] hover:text-[#ff5353] py-6">Footwear</Button></Link>
 							</li>
 							<li className='list-none'>
-								<Link className="link" to="/">
+								<Link className="link" to="/productListing">
 								<Button size="sm" variant="custom" className="link transition font-semibold text-[rgba(0, 0, 0, 0.7)] hover:text-[#ff5353] py-6">Grocies</Button></Link>
 							</li>
 							<li className='list-none'>
-								<Link className="link" to="/"><Button size="sm" variant="custom" className="link transition font-semibold text-[rgba(0, 0, 0, 0.7)] hover:text-[#ff5353] py-6">Beauty</Button></Link>
+								<Link className="link" to="/productListing"><Button size="sm" variant="custom" className="link transition font-semibold text-[rgba(0, 0, 0, 0.7)] hover:text-[#ff5353] py-6">Beauty</Button></Link>
 							</li>
 							<li className='list-none'>
-								<Link className="link" to="/"><Button size="sm" variant="custom" className="link transition font-semibold text-[rgba(0, 0, 0, 0.7)] hover:text-[#ff5353] py-6">Wellness</Button></Link>
+								<Link className="link" to="/productListing"><Button size="sm" variant="custom" className="link transition font-semibold text-[rgba(0, 0, 0, 0.7)] hover:text-[#ff5353] py-6">Wellness</Button></Link>
 							</li>
 							<li className='list-none'>
-								<Link className="link" to="/"><Button size="sm" variant="custom" className="link transition font-semibold text-[rgba(0, 0, 0, 0.7)] hover:text-[#ff5353] py-6">Jewellery</Button></Link>
+								<Link className="link" to="/productListing"><Button size="sm" variant="custom" className="link transition font-semibold text-[rgba(0, 0, 0, 0.7)] hover:text-[#ff5353] py-6">Jewellery</Button></Link>
 							</li>
 						</ul>
 					</div>
