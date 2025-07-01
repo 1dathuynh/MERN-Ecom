@@ -37,6 +37,20 @@ header .top-strip{
 	width: 90%;
 	margin: auto
 }
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.iiz__img{
+	border-radius: 15px;
+}
 
 @theme inline {
 	--radius-sm: calc(var(--radius) - 4px);

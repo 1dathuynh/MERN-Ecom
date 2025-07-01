@@ -22,6 +22,8 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         custom:
           "hover:bg-white cursor-pointer hover:scale-[1.03]",
+        custom3:
+         "text-[#000] cursor-pointer rounded-none hover:bg-[#f1f1f1] border-t-1 border-b-1 border-r-1 border-[#222] ",
         btnOrg: "text-white uppercase rounded-sm py-3 px-6 bg-[#ff5353] hover:bg-black",
         custom2: 'text-black/80 w-full justify-start text-left bg-white text-black cursor-pointer hover:text-white',
         effect:
