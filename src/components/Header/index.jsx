@@ -6,6 +6,7 @@ import { IoIosGitCompare } from "react-icons/io";
 import { CiShoppingCart } from "react-icons/ci";
 import NavigationPage from '@/components/Header/Navigation';
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip" 
+import { Heart } from 'lucide-react';
 const Header = () => {
 	return (
 		<header className='bg-white'>
@@ -44,7 +45,7 @@ const Header = () => {
 						<div className='flex items-center justify-end'>
 							<ul className='flex items-center gap-3 pl-2'>
 								<li className='list-none'>
-									<Link to="#" className='link font-semibold text-sm transition-shadow'>Sign In</Link> |
+									<Link to="/login" className='link font-semibold text-sm transition-shadow'>Sign In</Link> |
 								</li>
 								<li className='list-none -ml-2'>
 									<Link to="#" className='link font-semibold text-sm transition-shadow'>Sign Up</Link>
@@ -74,7 +75,7 @@ const Header = () => {
 												<Badge variant="custom" className="absolute top-0.5 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-[#ff5353] text-[10px] font-medium text-white">
 													3
 												</Badge>
-												<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+												<Heart />
 											</div>
 										</li>
 									</TooltipTrigger>
