@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import Search from '../Header/Search'
 import { Badge } from "@/components/ui/badge"
@@ -7,7 +7,9 @@ import { CiShoppingCart } from "react-icons/ci";
 import NavigationPage from '@/components/Header/Navigation';
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip" 
 import { Heart } from 'lucide-react';
+import { MyContext } from '../../App';
 const Header = () => {
+	const context = useContext(MyContext)
 	return (
 		<header className='bg-white'>
 			{/* Tool tip */}
@@ -35,7 +37,7 @@ const Header = () => {
 				<div className='container'>
 					<div className='grid grid-cols-[25%_45%_30%]'>
 						<div className='flex items-center'>
-							<Link to="#">
+							<Link to="/">
 								<img src='/logo.jpg' />
 							</Link>
 						</div>
@@ -48,7 +50,7 @@ const Header = () => {
 									<Link to="/login" className='link font-semibold text-sm transition-shadow'>Sign In</Link> |
 								</li>
 								<li className='list-none -ml-2'>
-									<Link to="#" className='link font-semibold text-sm transition-shadow'>Sign Up</Link>
+									<Link to="/register" className='link font-semibold text-sm transition-shadow'>Sign Up</Link>
 								</li>
 								<Tooltip>
 									<TooltipTrigger>
@@ -91,7 +93,7 @@ const Header = () => {
 												>
 													3
 												</Badge>
-												<CiShoppingCart className="h-6.5 w-6.5 text-gray-800" />
+												<CiShoppingCart onClick={()=>context.setOpenCartPanel(true)} className="h-6.5 w-6.5 text-gray-800" />
 											</div>
 										</li>
 									</TooltipTrigger>

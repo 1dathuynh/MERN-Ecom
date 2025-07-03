@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./style.css"
 import { Link } from 'react-router-dom'
 import Rating from '../ui/rating'
@@ -7,8 +7,10 @@ import { FaRegHeart } from "react-icons/fa"
 import { GoGitCompare } from "react-icons/go";
 import { MdZoomOutMap } from "react-icons/md";
 import { MdOutlineShoppingCart } from 'react-icons/md'
+import { MyContext } from '../../App'
 
 const ProductsItemListView = () => {
+	const context = useContext(MyContext)
 	return (
 		<div className='productItem flex items-center rounded-md shadow-xl' >
 			<div className='imgwrapper w-[25%] group relative overflow-hidden border-r-1 border-[rgba(0, 0, 0, 0.8)]'>
@@ -24,13 +26,13 @@ const ProductsItemListView = () => {
 				 10%
 				</span>
 				<div className='actions top-[-200px] opacity-0 group-hover:opacity-100 absolute transition-all duration-400 ease-in-out group-hover:top-[15px] flex-col right-[15px] z-50 flex items-center gap-2 w-[45px] '>
-					<Button variant='custom2' className="min-w-[35px] h-[35px] rounded-full">
+					<Button variant='customIconProductItem' className="min-w-[35px] h-[35px] rounded-full flex items-center justify-center">
 						<FaRegHeart className='text-18px' />
 					</Button>
-					<Button variant='custom2' className="min-w-[35px] h-[35px] rounded-full ">
+					<Button variant='customIconProductItem' className="min-w-[35px] h-[35px] rounded-full flex items-center justify-center ">
 						<GoGitCompare className='text-18px' />
 					</Button>
-					<Button variant='custom2' className="min-w-[35px] h-[35px] rounded-full">
+					<Button onClick = {() => context.setIsOpen(true)} variant='customIconProductItem' className="min-w-[35px] h-[35px] rounded-full flex items-center justify-center">
 						<MdZoomOutMap className='text-18px' />
 					</Button>
 				</div>

@@ -26,6 +26,7 @@ const buttonVariants = cva(
          "text-[#000] cursor-pointer rounded-none hover:bg-[#f1f1f1] border-t-1 border-b-1 border-r-1 border-[#222] ",
         btnOrg: "text-white uppercase rounded-sm py-3 px-6 bg-[#ff5353] hover:bg-black",
         custom2: 'text-black/80 w-full justify-start text-left bg-white text-black cursor-pointer hover:text-white',
+        customIconProductItem: 'text-black/80 w-full justify-start text-left bg-white cursor-pointer hover:bg-[#ff5252] hover:text-white',
         effect:
           "bg-white border-0 outline outline-1 outline-gray-300 px-8 py-6 shadow-[rgba(255,83,83,0.4)] transition duration-300 cursor-pointer rounded-md border-b-[4px] border-b-gray-200 hover:shadow-[0px_15px_25px_-5px_rgba(255,83,83,0.4)] hover:scale-[1.03] active:shadow-[0px_4px_8px_rgba(255,83,83,0.6)] active:scale-95",
       },
