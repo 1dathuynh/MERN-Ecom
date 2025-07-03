@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import ProductDetails from './pages/ProductDetails';
 import LoginPage from './pages/Login';
 import RegisterPage from './pages/Register';
+import { Toaster } from "@/components/ui/sonner"
 import {
   Dialog,
   DialogContent,
@@ -16,6 +17,8 @@ import {
 import ProductZoom from './components/ProductZoom';
 import ProductDetailsComponent from './components/ProductDetailComponent';
 import CartPage from './pages/Cart';
+import Verify from './components/Verify';
+import ForgotPasswordPage from './pages/ForgotPassword';
 const MyContext = createContext()
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,11 +49,14 @@ function App() {
             <Route path='/login' exact={true} element={<LoginPage/>} />
             <Route path='/register' exact={true} element={<RegisterPage/>} />
             <Route path='/cart' exact={true} element={<CartPage/>} />
-
+            <Route path='/verify' exact={true} element={<Verify/>} />
+            <Route path='/forgot-password' exact={true} element={<ForgotPasswordPage/>} />
+            
           </Routes>
          <Footer />
          </MyContext.Provider>
       </BrowserRouter>
+       <Toaster richColors />
 
       <Dialog open={isOpen} onOpenChange={handleOpenChange} className="productDetailsModal" >
       <DialogContent className="sm:max-w-6xl">
