@@ -8,35 +8,31 @@ import Footer from './components/Footer';
 import ProductDetails from './pages/ProductDetails';
 import LoginPage from './pages/Login';
 import RegisterPage from './pages/Register';
-import { Button } from "@/components/ui/button"
-import { IoCloseSharp } from "react-icons/io5";
 import {
   Dialog,
   DialogContent,
 } from "@/components/ui/dialog"
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerFooter,
-} from "@/components/ui/drawer"
+
 import ProductZoom from './components/ProductZoom';
 import ProductDetailsComponent from './components/ProductDetailComponent';
-import CartPannel from './components/CartPanel';
+import CartPage from './pages/Cart';
 const MyContext = createContext()
 function App() {
   const [isOpen, setIsOpen] = useState(false);
-  const [openCartPanel, setOpenCartPanel] = useState(true)
-  const values =  {
-    setIsOpen,
-    setOpenCartPanel
-  }
-  const handleOpenChange = (open) => {
+  const [openCartPanel, setOpenCartPanel] = useState(false)
+   const handleOpenChange = (open) => {
     setIsOpen(open)
   }
   const toggleCartPanel = (newOpen) => {
     setOpenCartPanel(newOpen)
   }
+  const values =  {
+    setIsOpen,
+    setOpenCartPanel,
+    openCartPanel,
+    toggleCartPanel
+  }
+ 
 
   return (
     <>
@@ -49,6 +45,8 @@ function App() {
             <Route path='/productDetails/:id' exact={true} element={<ProductDetails/>} />
             <Route path='/login' exact={true} element={<LoginPage/>} />
             <Route path='/register' exact={true} element={<RegisterPage/>} />
+            <Route path='/cart' exact={true} element={<CartPage/>} />
+
           </Routes>
          <Footer />
          </MyContext.Provider>
@@ -67,20 +65,6 @@ function App() {
           </div>
       </DialogContent>
     </Dialog>
-
-
-      {/* Cart Panel */}
-      <Drawer direction='right' open={openCartPanel} onOpenChange={toggleCartPanel}>
-        <DrawerContent className="!w-[500px]">
-          <div className='flex items-center justify-between py-4 px-4 border-b border-[rgba(0, 0, 0, 0.1)]'>
-            <h3>Shopping Cart (1)</h3>
-            <DrawerClose><IoCloseSharp className='text-[20px] cursor-pointer' /></DrawerClose>
-          </div>
-
-          <CartPannel />
-        </DrawerContent>
-      </Drawer>
-
     
     </>
   )

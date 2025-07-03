@@ -1,17 +1,20 @@
 import React from 'react'
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { Button } from '../ui/button';
+import { Link } from 'react-router-dom';
 const CartPannel = () => {
 	return (
 		<>
 			<div className='scroll w-full max-h-[400px] overflow-y-scroll overflow-x-hidden py-3 px-4'>
 				 		<div className='cartItem w-full flex items-center gap-4  border-b border-[rgba(0,0,0,0.1)] pb-5'>
               <div className='img w-[25%] overflow-hidden h-[110px] rounded-md'>
-                <img src='https://image.hm.com/assets/hm/af/9b/af9b624b039db30c2cb4a2a9070637f949c31410.jpg?imwidth=820' className='w-full'
+								<Link to='/productDetails/12313' className='block group'>
+                <img src='https://image.hm.com/assets/hm/af/9b/af9b624b039db30c2cb4a2a9070637f949c31410.jpg?imwidth=820' className='w-full transform transition-transform duration-200 ease-in-out group-hover:scale-105'
                  />
+								 </Link>
               </div>
               <div className='info w-[75%] pr-5 relative'>
-                <h4 className='text-[14px] font-semibold'><a href='/productDetails/12321312' className='link'>Textured jersey top</a></h4>
+               <Link to='/productDetails/12313' className='link transition-all'> <h4 className='text-[14px] font-semibold'>Textured jersey top</h4> </Link>
 								<p className='flex items-center gap-5'>
 									<span>Quantity: <span>2</span></span>
 									<span className='text-[#ff5252] font-bold'>Price: $25</span>
@@ -22,11 +25,13 @@ const CartPannel = () => {
             </div>
 						 <div className='cartItem w-full flex items-center gap-4  border-b border-[rgba(0,0,0,0.1)] pb-5'>
               <div className='img w-[25%] overflow-hidden h-[110px] rounded-md'>
-                <img src='https://image.hm.com/assets/hm/af/9b/af9b624b039db30c2cb4a2a9070637f949c31410.jpg?imwidth=820' className='w-full'
+								<Link to='/productDetails/12313' className='block group'>
+                <img src='https://image.hm.com/assets/hm/af/9b/af9b624b039db30c2cb4a2a9070637f949c31410.jpg?imwidth=820' className='w-full transform transition-transform duration-200 ease-in-out group-hover:scale-105'
                  />
+								 </Link>
               </div>
               <div className='info w-[75%] pr-5 relative'>
-                <h4 className='text-[14px] font-semibold'><a href='/productDetails/12321312' className='link'>Textured jersey top</a></h4>
+               <Link to='/productDetails/12313' className='link transition-all'> <h4 className='text-[14px] font-semibold'>Textured jersey top</h4> </Link>
 								<p className='flex items-center gap-5'>
 									<span>Quantity: <span>2</span></span>
 									<span className='text-[#ff5252] font-bold'>Price: $25</span>
@@ -35,13 +40,15 @@ const CartPannel = () => {
 
               </div>
             </div>
-						 <div className='cartItem w-full flex items-center gap-4  border-b border-[rgba(0,0,0,0.1)] pb-5'>
+						<div className='cartItem w-full flex items-center gap-4  border-b border-[rgba(0,0,0,0.1)] pb-5'>
               <div className='img w-[25%] overflow-hidden h-[110px] rounded-md'>
-                <img src='https://image.hm.com/assets/hm/af/9b/af9b624b039db30c2cb4a2a9070637f949c31410.jpg?imwidth=820' className='w-full'
+								<Link to='/productDetails/12313' className='block group'>
+                <img src='https://image.hm.com/assets/hm/af/9b/af9b624b039db30c2cb4a2a9070637f949c31410.jpg?imwidth=820' className='w-full transform transition-transform duration-200 ease-in-out group-hover:scale-105'
                  />
+								 </Link>
               </div>
               <div className='info w-[75%] pr-5 relative'>
-                <h4 className='text-[14px] font-semibold'><a href='/productDetails/12321312' className='link'>Textured jersey top</a></h4>
+               <Link to='/productDetails/12313' className='link transition-all'> <h4 className='text-[14px] font-semibold'>Textured jersey top</h4> </Link>
 								<p className='flex items-center gap-5'>
 									<span>Quantity: <span>2</span></span>
 									<span className='text-[#ff5252] font-bold'>Price: $25</span>
@@ -73,8 +80,8 @@ const CartPannel = () => {
 					<span className='text-[#ff5252]'>$86.00</span>
 					</div>
 				<div className='flex items-center justify-between w-full mt-5 space-x-2'>
-				<Button className='w-[48%] capitalize' variant='btnOrg'>View Cart</Button>
-				<Button className='w-[48%] capitalize' variant='btnOrg'>Checkout</Button>
+				<Link className='w-[48%]' to='/cart'><Button className='capitalize w-full' variant='btnOrg'>View Cart</Button></Link>
+				<Link className='w-[48%]' to='/checkout'><Button className='w-full capitalize' variant='btnOrg'>Checkout</Button></Link>
 				</div>
 			</div>
 		</div>

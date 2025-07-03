@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { FaShippingFast } from "react-icons/fa";
 import { BsChatDots } from "react-icons/bs";
 import { Link } from 'react-router-dom';
@@ -12,7 +12,18 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaPinterestP } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+} from "@/components/ui/drawer"
+import CartPannel from '@/components/CartPanel';
+import { MyContext } from '../../App';
+import { IoCloseSharp } from 'react-icons/io5';
+
 const Footer = () => {
+
+	const context = useContext(MyContext)
 	return (
 		<>
 			<footer className='py-6 bg-white boder-1 border-black/80 '>
@@ -151,6 +162,18 @@ const Footer = () => {
 					</div>
 				</div>
 			</div>
+
+			 {/* Cart Panel */}
+						<Drawer direction='right' open={context.openCartPanel} onOpenChange={context.toggleCartPanel}>
+							<DrawerContent className="!w-[500px]">
+								<div className='flex items-center justify-between py-4 px-4 border-b border-[rgba(0, 0, 0, 0.1)]'>
+									<h3>Shopping Cart (1)</h3>
+									<DrawerClose><IoCloseSharp className='text-[20px] cursor-pointer' /></DrawerClose>
+								</div>
+			
+								<CartPannel />
+							</DrawerContent>
+						</Drawer>
 		
 		</>
 	)
