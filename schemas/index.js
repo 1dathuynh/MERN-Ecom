@@ -27,3 +27,9 @@ export const checkoutSchemas = z.object({
 	email: z.string().email("Invalid email"),
 	address: z.string().min(5, "Address is to short"),
 })
+
+export const myProfileSchemas = z.object({
+	name: z.string().min(1,"Invalid name"),
+	email: z.string().email("Invalid email"),
+	phone: z.number()
+})

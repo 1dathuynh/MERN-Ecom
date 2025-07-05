@@ -81,7 +81,7 @@ const CartPannel = () => {
 					</div>
 				<div className='flex items-center justify-between w-full mt-5 space-x-2'>
 				<Link className='w-[48%]' to='/cart'><Button className='capitalize w-full' variant='btnOrg'>View Cart</Button></Link>
-				<Link className='w-[48%]' to='/checkout'><Button className='w-full capitalize' variant='btnOrg'>Checkout</Button></Link>
+				<Link className='w-[48%]' to='/checkout'><Button variant="btnOrgBorder" className='w-full capitalize'>Checkout</Button></Link>
 				</div>
 			</div>
 		</div>

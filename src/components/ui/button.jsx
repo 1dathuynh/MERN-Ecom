@@ -9,6 +9,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
+        defaultNoActive: "border boder-[rgba(0,0,0,0.1)] bg-white hover:bg-white hover:text-[rgba(0,0,0,0.8)] text-[rgba(0,0,0,0.8)] rounded-none flex items-center gap-2 transition-all active:scale-100 active:bg-[#f1f1f1]",
         default:
           "bg-primary text-primary-foreground shadow-xs hover:bg-primary/90",
         btnUser:
@@ -27,6 +28,7 @@ const buttonVariants = cva(
           "hover:bg-white cursor-pointer hover:scale-[1.03]",
         custom3:
          "text-[#000] cursor-pointer rounded-none hover:bg-[#f1f1f1] border-t-1 border-b-1 border-r-1 border-[#222] ",
+       btnOrgBorder: "text-[#ff5252] bg-white border border-[#ff5252] uppercase rounded-sm py-3 px-6 hover:border-black hover:bg-black hover:text-white",
         btnOrg: "text-white uppercase rounded-sm py-3 px-6 bg-[#ff5353] hover:bg-black",
         custom2: 'text-black/80 w-full justify-start text-left bg-white text-black cursor-pointer hover:text-white',
         customIconProductItem: 'text-black/80 w-full justify-start text-left bg-white cursor-pointer hover:bg-[#ff5252] hover:text-white',

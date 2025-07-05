@@ -20,6 +20,7 @@ import CartPage from './pages/Cart';
 import Verify from './components/Verify';
 import ForgotPasswordPage from './pages/ForgotPassword';
 import CheckoutPage from './pages/Checkout';
+import MyAccountPage from './pages/MyAccount';
 const MyContext = createContext()
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,6 +57,8 @@ function App() {
             <Route path='/verify' exact={true} element={<Verify/>} />
             <Route path='/forgot-password' exact={true} element={<ForgotPasswordPage/>} />
             <Route path='/checkout' exact={true} element={<CheckoutPage/>} />
+            <Route path='/my-account' exact={true} element={<MyAccountPage/>} />
+
 
             
           </Routes>

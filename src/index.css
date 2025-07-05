@@ -50,6 +50,7 @@ header .top-strip{
   transition: height 500ms;
 }
 
+
 .container{
 	width: 90%;
 	margin: auto
@@ -78,6 +79,28 @@ h1, h2, h3, h4{
 	font-weight: 600;
 }
 
+.myAccountTabs li a {
+	display: inline-block;
+  position: relative;
+	width: 100%;
+}
+.myAccountTabs li a::before {
+  content: '';
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+	display: block !important;
+  background: #ff5252;
+	transition: all 0.3s ease-in-out;
+	opacity: 0;
+}
+.myAccountTabs li a.active::before{
+	height: 100%;
+	opacity: 1;
+	top: 0;
+}
 @theme inline {
 	--radius-sm: calc(var(--radius) - 4px);
 	--radius-md: calc(var(--radius) - 2px);

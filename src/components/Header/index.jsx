@@ -80,11 +80,11 @@ const Header = () => {
 										</div>
 									</Button>
 										</DropdownMenuTrigger>
-										<DropdownMenuContent className="min-w-[140px]">
-											<DropdownMenuItem><FaRegUser />My Account</DropdownMenuItem>
-											<DropdownMenuItem><BsHandbag />Orders</DropdownMenuItem>
-											<DropdownMenuItem><IoMdHeartEmpty />My List</DropdownMenuItem>
-											<DropdownMenuItem><CiLogout />Logout</DropdownMenuItem>
+										<DropdownMenuContent className="min-w-[160px] py-2">
+											<DropdownMenuItem className="px-3 py-3"><FaRegUser /><Link className='w=full' to='/my-account'>My Account</Link></DropdownMenuItem>
+											<DropdownMenuItem className="px-3 py-3"><BsHandbag /><Link className='w=full' to='/my-orders'>Orders</Link></DropdownMenuItem>
+											<DropdownMenuItem className="px-3 py-3"><IoMdHeartEmpty /><Link className='w=full' to='/my-list'>My List</Link></DropdownMenuItem>
+											<DropdownMenuItem className="px-3 py-3"><CiLogout /><Link className='w=full' to='/logout'>Logout/</Link></DropdownMenuItem>
 										</DropdownMenuContent>
 									</DropdownMenu>
 									</>
