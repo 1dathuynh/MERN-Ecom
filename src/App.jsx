@@ -19,10 +19,12 @@ import ProductDetailsComponent from './components/ProductDetailComponent';
 import CartPage from './pages/Cart';
 import Verify from './components/Verify';
 import ForgotPasswordPage from './pages/ForgotPassword';
+import CheckoutPage from './pages/Checkout';
 const MyContext = createContext()
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [openCartPanel, setOpenCartPanel] = useState(false)
+  const [isLogin, setIsLogin] = useState(true)
    const handleOpenChange = (open) => {
     setIsOpen(open)
   }
@@ -33,7 +35,9 @@ function App() {
     setIsOpen,
     setOpenCartPanel,
     openCartPanel,
-    toggleCartPanel
+    toggleCartPanel,
+    isLogin,
+    setIsLogin
   }
  
 
@@ -51,6 +55,8 @@ function App() {
             <Route path='/cart' exact={true} element={<CartPage/>} />
             <Route path='/verify' exact={true} element={<Verify/>} />
             <Route path='/forgot-password' exact={true} element={<ForgotPasswordPage/>} />
+            <Route path='/checkout' exact={true} element={<CheckoutPage/>} />
+
             
           </Routes>
          <Footer />

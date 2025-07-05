@@ -2,12 +2,23 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import Search from '../Header/Search'
 import { Badge } from "@/components/ui/badge"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 import { IoIosGitCompare } from "react-icons/io";
 import { CiShoppingCart } from "react-icons/ci";
+import { BsHandbag } from "react-icons/bs";
 import NavigationPage from '@/components/Header/Navigation';
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip" 
 import { Heart } from 'lucide-react';
 import { MyContext } from '../../App';
+import { FaRegUser } from "react-icons/fa6";
+import { IoMdHeartEmpty } from "react-icons/io";
+import { CiLogout } from "react-icons/ci";
+import { Button } from '../ui/button';
 const Header = () => {
 	const context = useContext(MyContext)
 	return (
@@ -46,12 +57,39 @@ const Header = () => {
 						</div>
 						<div className='flex items-center justify-end'>
 							<ul className='flex items-center gap-3 pl-2'>
-								<li className='list-none'>
+								{context.isLogin === false ? (
+									<>
+										<li className='list-none'>
 									<Link to="/login" className='link font-semibold text-sm transition-shadow'>Sign In</Link> |
 								</li>
 								<li className='list-none -ml-2'>
 									<Link to="/register" className='link font-semibold text-sm transition-shadow'>Sign Up</Link>
 								</li>
+									</>
+								): (
+									<>
+									<DropdownMenu>
+										<DropdownMenuTrigger>
+											<Button variant='btnUserOutline' className='myAccountWrap flex items-center gap-3 '>
+										<Button variant='btnUser' className='w-[40px] h-[40px] rounded-full  bg-[#f1f1f1]'>
+											<FaRegUser className='text-[16px text-[rgba(0,0,0,0.7)]' />
+										</Button>
+										<div className='info flex flex-col'>
+											<h4 className='text-[13px] mb-0 text-left justify-start'>John Doe</h4>
+											<span className='text-[12px] text-left justify-start truncate max-w-[150px]'>JohnDoe@example.com</span>
+										</div>
+									</Button>
+										</DropdownMenuTrigger>
+										<DropdownMenuContent className="min-w-[140px]">
+											<DropdownMenuItem><FaRegUser />My Account</DropdownMenuItem>
+											<DropdownMenuItem><BsHandbag />Orders</DropdownMenuItem>
+											<DropdownMenuItem><IoMdHeartEmpty />My List</DropdownMenuItem>
+											<DropdownMenuItem><CiLogout />Logout</DropdownMenuItem>
+										</DropdownMenuContent>
+									</DropdownMenu>
+									</>
+								)}
+								
 								<Tooltip>
 									<TooltipTrigger>
 										<li className="list-none">

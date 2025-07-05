@@ -21,3 +21,9 @@ export const registerSchemas =  z.object({
 	})
 
 })
+
+export const checkoutSchemas = z.object({
+	name: z.string().min(1, "Name is required"),
+	email: z.string().email("Invalid email"),
+	address: z.string().min(5, "Address is to short"),
+})
